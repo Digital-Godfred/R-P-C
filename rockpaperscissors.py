@@ -18,7 +18,9 @@ def play():
         print(f"Computer chose: {computer_choice}")
 
         if player_choice == computer_choice:
+            ties = ties + 1
             print("It's a tie")
+            
         elif (player_choice == "Scissors" and computer_choice == "Paper") or \
              (player_choice == "Paper" and computer_choice == "Rock") or \
              (player_choice == "Rock" and computer_choice == "Scissors"):
@@ -30,7 +32,8 @@ def play():
 
     if player_score > computer_score:
         print("Congratulations! You win the game")
-        print(f"Player: {player_score} Computer: {computer_score}")
+        print(f"Player: {player_score} Computer: {computer_score}, Ties: {ties}")
     else:
         print("You lost the game. Better luck next time!")
     
+play()
